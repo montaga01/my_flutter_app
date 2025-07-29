@@ -1,0 +1,19 @@
+name: my_flutter_app
+description: A simple two screens Flutter app.
+publish_to: 'none' # since this is a private app
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
