@@ -1,6 +1,6 @@
 name: my_flutter_app
 description: A simple two screens Flutter app.
-publish_to: 'none' # since this is a private app
+publish_to: 'none'
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
