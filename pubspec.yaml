@@ -13,7 +13,7 @@ dependencies:
 
 dev_dependencies:
   flutter_test:
-    adk: flutter
+    sdk: flutter
 
 flutter:
   uses-material-design: true
