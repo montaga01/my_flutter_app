@@ -1,19 +1,19 @@
-name: my_flutter_app
-description: A simple two screens Flutter app.
+name: simple_counter_app
+description: A simple Flutter counter application.
 publish_to: 'none'
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
+  flutter:
+    sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  flutter_test:
+    sdk: flutter
 
 flutter:
-  uses-material-design: true
+  uses-material-design: true
