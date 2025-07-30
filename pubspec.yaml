@@ -3,7 +3,7 @@ description: A simple Flutter counter application.
 publish_to: 'none'
 
 environment:
-  sdk: '^3.32.8'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
