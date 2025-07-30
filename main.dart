@@ -1,51 +1,56 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'تطبيق بخروجين',
-      home: HomeScreen(),
+      title: 'Simple Counter App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const CounterPage(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class CounterPage extends StatefulWidget {
+  const CounterPage({super.key});
+
+  @override
+  State<CounterPage> createState() => _CounterPageState();
+}
+
+class _CounterPageState extends State<CounterPage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('الشاشة الرئيسية')),
+      appBar: AppBar(
+        title: const Text('Simple Counter'),
+      ),
       body: Center(
-        child: ElevatedButton(
-          child: Text('اذهب للشاشة الثانية'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondScreen()),
-            );
-          },
+        child: Text(
+          'Button pressed $_counter times',
+          style: const TextStyle(fontSize: 24),
         ),
       ),
-    );
-  }
-}
-
-class SecondScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('الشاشة الثانية')),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('العودة للشاشة الرئيسية'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
       ),
     );
   }
