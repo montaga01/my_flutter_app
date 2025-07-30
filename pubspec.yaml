@@ -3,11 +3,11 @@ description: A simple Flutter counter application.
 publish_to: 'none'
 
 environment:
-  sdk: '^3.32.8'
+  sdk: '^3.32.8'
 
 dependencies:
-  flutter:
-    sdk: flutter
+  flutter:
+    sdk: flutter
 
 flutter:
-  uses-material-design: true
+  uses-material-design: true
